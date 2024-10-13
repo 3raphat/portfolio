@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     body.classList.toggle("dark");
     updateButtonText();
     saveThemePreference();
-    greeting();
   }
 
   function updateButtonText() {
@@ -117,6 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
       greetingText.textContent = "Good evening 🌙, ";
     }
   }
+
+  greeting();
 
   const contactForm = document.getElementById("contact-form");
   contactForm.addEventListener("submit", (e) => {
