@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <script type="text/javascript" src="js/vanilla-tilt.min.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/clock.js" defer></script>
+  </head>
+  <body>
+    <div id="konami-code-container">
+      <span class="keyboard-container">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor">
+            <path d="M412-114v-470L210-383l-96-97 366-366 366 366-96 98-202-202v470H412Z" />
+          </svg>
+        </span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor">
+            <path d="M412-114v-470L210-383l-96-97 366-366 366 366-96 98-202-202v470H412Z" />
+          </svg>
+        </span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor">
+            <path d="M412-846v470L210-577l-96 97 366 366 366-366-96-98-202 202v-470H412Z" />
+          </svg>
+        </span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor">
+            <path d="M412-846v470L210-577l-96 97 366 366 366-366-96-98-202 202v-470H412Z" />
+          </svg>
+        </span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor">
+            <path d="m376-412 201 202-97 96-366-366 366-366 98 96-202 202h470v136H376Z" />
+          </svg>
+        </span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor">
+            <path d="M584-412H114v-136h470L382-750l98-96 366 366-366 366-97-96 201-202Z" />
+          </svg>
+        </span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor">
+            <path d="m376-412 201 202-97 96-366-366 366-366 98 96-202 202h470v136H376Z" />
+          </svg>
+        </span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor">
+            <path d="M584-412H114v-136h470L382-750l98-96 366 366-366 366-97-96 201-202Z" />
+          </svg>
+        </span>
+        <span>B</span>
+        <span>A</span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor">
+            <path d="M355-200 74-480l281-280 95 94-117 118h417v-162h136v298H333l117 117-95 95Z" />
+          </svg>
+        </span>
+      </span>
+    </div>
+    <main class="container">
+      <div class="profile-container">
+        <div class="profile-info">
+          <img
+            id="profile-pic"
+            src="https://lh3.googleusercontent.com/a/ACg8ocJGN0VnYeJweFKbl5q4mOnZAlqwKKJ11rJTlCCH4Z1hq2g0Aj7p=s288-c-no"
+            alt="Profile"
+          />
+          <div>
+            <h1>Theeraphat Jaingam</h1>
+            <p>💻 Computer Engineering Student at KMUTT</p>
+          </div>
+        </div>
+        <button id="theme-toggle"></button>
+      </div>
+
+      <div class="divider"></div>
+
+      <nav class="nav-container">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <section id="about">
+        <h2 class="section-header">About</h2>
+        <p class="about-text">
+          <span id="greeting-text">Hello, </span>I'm Theeraphat Jaingam, a computer engineering student at King
+          Mongkut's University of Technology Thonburi (KMUTT). I'm a passionate developer and a quick learner. I'm
+          currently looking for a web development internship.
+        </p>
+      </section>
+      <section id="education">
+        <h2 class="section-header">Education</h2>
+        <div class="education-item">
+          <div class="education-info">
+            <h3>
+              <div class="school-logo-container">
+                <img src="images/kmutt.png" alt="KMUTT Logo" class="school-logo" />
+              </div>
+              King Mongkut's University of Technology Thonburi (KMUTT)
+            </h3>
+            <p class="degree">Bachelor of Engineering Program in Computer Engineering</p>
+            <p class="date">2024 - PRESENT</p>
+          </div>
+        </div>
+        <div class="education-item">
+          <div class="education-info">
+            <h3>
+              <div class="school-logo-container">
+                <img src="images/sk.png " alt="Suankularb Wittayalai School Logo" class="school-logo" />
+              </div>
+              Suankularb Wittayalai School
+            </h3>
+            <p class="degree">GATE Program (Gifted and Talented Education Program)</p>
+            <p class="date">2018 - 2023</p>
+          </div>
+        </div>
+        <div class="education-item">
+          <div class="education-info">
+            <h3>
+              <div class="school-logo-container">
+                <img
+                  src="images/anuban.png"
+                  alt="Anuban Nakhon Pathom School Logo"
+                  class="school-logo"
+                  style="scale: 0.8"
+                />
+              </div>
+              Anuban Nakhon Pathom School
+            </h3>
+            <p class="degree">Gifted Program</p>
+            <p class="date">2012 - 2017</p>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <h2 class="section-header">Skills</h2>
+        <div class="skills-container">
+          <div
+            class="skill-category"
+            data-tilt
+            data-tilt-glare
+            data-tilt-max-glare="0.1"
+            data-tilt-reverse="false"
+            data-tilt-scale="1.05"
+            data-tilt-max="12"
+          >
+            <h3>Programming Languages</h3>
+            <ul>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                />
+                JavaScript
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  alt="TypeScript"
+                />
+                TypeScript
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                Python
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />
+                C
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                  alt="C++"
+                />
+                C++
+              </li>
+            </ul>
+          </div>
+          <div
+            class="skill-category"
+            data-tilt
+            data-tilt-glare
+            data-tilt-max-glare="0.1"
+            data-tilt-reverse="false"
+            data-tilt-scale="1.05"
+            data-tilt-max="12"
+          >
+            <h3>Web Technologies</h3>
+            <ul>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+                HTML5
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+                CSS3
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                React
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                  alt="TailwindCSS"
+                />
+                TailwindCSS
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                  alt="Next.js"
+                />
+                Next.js
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                  alt="Node.js"
+                />
+                Node.js
+              </li>
+            </ul>
+          </div>
+          <div
+            class="skill-category"
+            data-tilt
+            data-tilt-glare
+            data-tilt-max-glare="0.1"
+            data-tilt-reverse="false"
+            data-tilt-scale="1.05"
+            data-tilt-max="12"
+          >
+            <h3>Databases</h3>
+            <ul>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                  alt="MongoDB"
+                />
+                MongoDB
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+                MySQL
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                  alt="PostgreSQL"
+                />
+                PostgreSQL
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" />
+                SQLite
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
+                  alt="Supabase"
+                />
+                Supabase
+              </li>
+            </ul>
+          </div>
+          <div
+            class="skill-category"
+            data-tilt
+            data-tilt-glare
+            data-tilt-max-glare="0.1"
+            data-tilt-reverse="false"
+            data-tilt-scale="1.05"
+            data-tilt-max="12"
+          >
+            <h3>Tools & Platforms</h3>
+            <ul>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+                Git
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+                Docker
+              </li>
+              <li>
+                <svg viewBox="0 0 128 128" class="github-icon">
+                  <g fill="inherit">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
+                    ></path>
+                    <path
+                      d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
+                    ></path>
+                  </g>
+                </svg>
+                GitHub
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+                Figma
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <h2 class="section-header">Projects</h2>
+        <div class="projects-container"></div>
+        <a href="projects.html" class="view-more">View more</a>
+      </section>
+      <section id="contact">
+        <h2 class="section-header">Contact</h2>
+        <div class="contact-container">
+          <div class="social-links">
+            <h3>Social Links</h3>
+            <ul>
+              <li>
+                <a href="https://github.com/3raphat" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                    />
+                  </svg>
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/theeraphat-jaingam-3102822bb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                    />
+                  </svg>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="mailto:treeraphat234@gmail.com">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+                    />
+                  </svg>
+                  Email
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/_3raphat" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                    />
+                  </svg>
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com/3raphatt_" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                    />
+                  </svg>
+                  X
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-form">
+            <h3>Send me a message</h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <div class="quote-container"></div>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60" fill="none">
+            <path
+              d="M18 9L16.5218 18.4136C16.2728 19.9992 16.1483 20.7921 15.5864 21.2644C14.3865 22.273 9.54699 22.217 8.41358 21.2644C7.85167 20.7921 7.72718 19.9992 7.47819 18.4136L6 9"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+            />
+            <path
+              d="M6 9L6.51444 7.71391C7.41167 5.47084 9.58414 4 12 4C14.4159 4 16.5883 5.47084 17.4856 7.71391L18 9"
+              stroke="currentColor"
+              stroke-width="1"
+            />
+            <path d="M5 9H19" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
+            <path d="M13 9L16 2" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
+            <path
+              d="M10.0089 16.5H10M14 18H13.9911M13.0112 14H13.0023"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>&copy; 2024 - Theeraphat Jaingam</p>
+        </div>
+
+        <nav class="footer-links">
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+    <button id="scroll-to-top" aria-label="Scroll to top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m18 15-6-6-6 6" />
+      </svg>
+    </button>
+  </body>
+</html>
