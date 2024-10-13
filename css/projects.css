@@ -7,8 +7,7 @@ body {
     background-color: var(--background-dark);
   }
 
-  transition: color 0.3s ease-in,
-  background-color 0.3s ease-in;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in;
 }
 
 .container {
