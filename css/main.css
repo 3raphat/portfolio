@@ -218,8 +218,9 @@ section {
   }
 }
 
-section .about-text {
+section#about .about-text {
   text-wrap: pretty;
+  line-height: 1.625;
 }
 
 .education-item {
