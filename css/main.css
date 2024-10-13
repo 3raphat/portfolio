@@ -238,11 +238,12 @@ section .about-text {
       color: var(--secondary-dark);
     }
   }
+}
 
+.education-item .education-info {
   h3 {
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 0.25rem;
     display: inline-flex;
     align-items: center;
   }
@@ -251,6 +252,7 @@ section .about-text {
     font-weight: 500;
     color: var(--secondary-light);
     font-size: 0.9rem;
+    margin-bottom: 0.125rem;
 
     .dark & {
       color: var(--secondary-dark);
@@ -260,7 +262,6 @@ section .about-text {
   .date {
     font-size: 0.8rem;
     color: var(--secondary-light);
-    margin-bottom: 0.25rem;
 
     .dark & {
       color: var(--secondary-dark);
