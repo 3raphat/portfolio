@@ -40,7 +40,7 @@ body {
 }
 
 .project-card {
-  background-color: var(--background-light);
+  background-color: var(--card-background-light);
   border: 1px solid var(--border-light);
   border-radius: 0.5rem;
   padding: 1rem;
@@ -53,7 +53,7 @@ body {
   animation: fadeIn 0.5s ease-in-out forwards;
 
   .dark & {
-    background-color: var(--background-dark);
+    background-color: var(--card-background-dark);
     border-color: var(--border-dark);
   }
 }
@@ -76,8 +76,7 @@ body {
 .project-card .language {
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--text-light);
-  background-color: var(--border-light);
+  background-color: rgba(24, 24, 27, 0.1);
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   display: inline-flex;
@@ -85,8 +84,7 @@ body {
   align-items: center;
 
   .dark & {
-    color: var(--text-dark);
-    background-color: var(--border-dark);
+    background-color: rgba(252, 252, 252, 0.1);
   }
 
   img {

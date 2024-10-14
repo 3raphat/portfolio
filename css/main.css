@@ -43,12 +43,12 @@
   display: flex;
   align-items: center;
   z-index: 1000;
-  background-color: rgb(252, 252, 252);
+  background-color: var(--card-background-light);
   border: 1px solid var(--border-light);
   transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
 
   .dark & {
-    background-color: rgb(24, 24, 27);
+    background-color: var(--card-background-dark);
     border-color: var(--border-dark);
   }
 
@@ -56,10 +56,11 @@
     display: flex;
     gap: 0.25rem;
     align-items: center;
+    font-family: var(--font-mono);
 
     span {
       font-size: 1.25rem;
-      font-family: "Source Code Pro", monospace;
+      font-family: var(--font-mono);
       font-optical-sizing: auto;
       font-weight: 900;
       color: rgb(180, 180, 180);
@@ -264,11 +265,11 @@ section#about .about-text {
   padding: 1rem;
   transition: background-color 0.3s ease-in, border-color 0.3s ease-in, transform 0.15s ease-in;
 
-  background-color: rgb(252, 252, 252);
+  background-color: var(--card-background-light);
   border: 1px solid var(--border-light);
 
   .dark & {
-    background-color: rgb(24, 24, 27);
+    background-color: var(--card-background-dark);
     border-color: var(--border-dark);
   }
 }
@@ -338,11 +339,11 @@ section#about .about-text {
   padding: 0.5rem;
   transition: background-color 0.3s ease-in, border-color 0.3s ease-in, transform 0.15s ease-in;
 
-  background-color: rgb(252, 252, 252);
+  background-color: var(--card-background-light);
   border: 1px solid var(--border-light);
 
   .dark & {
-    background-color: rgb(24, 24, 27);
+    background-color: var(--card-background-dark);
     border-color: var(--border-dark);
   }
 
@@ -391,7 +392,7 @@ section#about .about-text {
 
 .social-links h3,
 .contact-form h3 {
-  /* font-size: 1.1rem; */
+  font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }

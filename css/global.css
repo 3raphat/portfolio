@@ -1,16 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Fira+Code:wght@300..700&display=swap");
+
 :root {
   --background-light: rgb(255, 255, 255);
   --text-light: rgb(24, 24, 27);
   --secondary-light: rgb(113, 113, 122);
   --border-light: rgb(229, 231, 235);
+  --card-background-light: rgb(252, 252, 252);
 
   --background-dark: rgb(18, 18, 18);
   --text-dark: rgb(244, 244, 245);
   --secondary-dark: rgb(161, 161, 170);
   --border-dark: rgb(64, 64, 64);
+  --card-background-dark: rgb(24, 24, 27);
 
   --font-sans: "Inter", sans-serif;
   --font-serif: "Lora", serif;
+  --font-mono: "Fira Code", monospace;
 }
 
 * {
