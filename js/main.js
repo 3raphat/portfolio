@@ -3,9 +3,6 @@ const html = String.raw;
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
-  const navLinks = document.querySelectorAll(".nav-container a");
-  const sections = document.querySelectorAll("section");
-  const scrollToTopBtn = document.getElementById("scroll-to-top");
 
   function toggleTheme() {
     body.classList.toggle("dark");
@@ -49,11 +46,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function loadThemePreference() {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (savedTheme === "dark" || (savedTheme === null && systemPrefersDark)) {
       body.classList.add("dark");
     }
     updateButtonText();
   }
+
+  loadThemePreference();
+
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    if (localStorage.getItem("theme") === null) {
+      if (e.matches) {
+        body.classList.add("dark");
+      } else {
+        body.classList.remove("dark");
+      }
+      updateButtonText();
+    }
+  });
+
+  const navLinks = document.querySelectorAll(".nav-container a");
+  const sections = document.querySelectorAll("section");
+  const scrollToTopBtn = document.getElementById("scroll-to-top");
 
   function setActiveLink() {
     const scrollPosition = window.scrollY + 100;
@@ -101,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
   footerLinks.forEach((link) => link.addEventListener("click", smoothScroll));
   scrollToTopBtn.addEventListener("click", scrollToTop);
 
-  loadThemePreference();
   setActiveLink();
 
   function greeting() {
@@ -201,7 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Error fetching quote:", error);
         quoteContainer.innerHTML = "<p>Failed to load quote. Please-in try again later.</p>";
       });
-    quoteContainer.innerHTML = "<p>Failed to load quote. Please-in try again later.</p>";
   }
 
   fetchQuote();
