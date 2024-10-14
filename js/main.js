@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
         konamiIndex = 0;
         resetKeyboardColors();
       }
-    } else {
+    } else if (konamiIndex > 0) {
       const keyElements = document.querySelectorAll(".keyboard-container span");
       keyElements.forEach((element) => {
         element.classList.add("wrong");
