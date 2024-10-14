@@ -240,32 +240,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sr.reveal(".quote-container", { distance: "40px" });
 
-  let isRevealed = false;
-
-  function updateTime() {
-    if (isRevealed) {
-      const now = new Date();
-      const time = now.toLocaleTimeString("en-US", {
-        timeZone: "Asia/Bangkok",
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false,
-      });
-      const timeZone = now
-        .toLocaleTimeString("en-US", {
-          timeZone: "Asia/Bangkok",
-          timeZoneName: "short",
-        })
-        .split(" ")[2];
-
-      document.getElementById("local-time").textContent = `${time} (${timeZone})`;
-    }
-  }
-
-  updateTime();
-
-  setInterval(updateTime, 1000);
-
   const konamiCode = [
     "ArrowUp",
     "ArrowUp",
@@ -307,43 +281,30 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function revealProfileInfo() {
-    isRevealed = true;
-
     const keyboardContainer = document.querySelector(".keyboard-container");
-    keyboardContainer.style.transition = "opacity 0.5s ease-out";
-    keyboardContainer.style.opacity = "0";
 
-    setTimeout(() => {
-      keyboardContainer.remove();
+    function animateText(message, delay) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          keyboardContainer.textContent = "";
+          let index = 0;
 
-      const profileInfoList = document.createElement("ul");
-      profileInfoList.className = "profile-info-list";
+          function typeText() {
+            if (index < message.length) {
+              keyboardContainer.textContent += message[index];
+              index++;
+              const randomDelay = Math.floor(Math.random() * (150 - 50 + 1)) + 50; // Random delay between 50ms and 150ms
+              setTimeout(typeText, randomDelay);
+            } else {
+              resolve();
+            }
+          }
 
-      profileInfoList.innerHTML = html`
-        <li class="profile-info-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-            <path
-              d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
-            />
-            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-          </svg>
-          <span>Bangkok, Thailand</span>
-        </li>
-        <li class="profile-info-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-          </svg>
-          <span id="local-time">--:--</span>
-        </li>
-      `;
+          typeText();
+        }, delay);
+      });
+    }
 
-      document.querySelector("#konami-code-container").appendChild(profileInfoList);
-
-      setTimeout(() => {
-        profileInfoList.style.opacity = "1";
-        profileInfoList.style.transform = "translateY(0)";
-      }, 50);
-    }, 500);
+    animateText("Decrypting my location...", 0).then(() => animateText("13.7563° N, 100.5018° E", 2000));
   }
 });
