@@ -256,7 +256,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let konamiIndex = 0;
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === konamiCode[konamiIndex]) {
+    const expectedKey = konamiCode[konamiIndex];
+    if (expectedKey === "a" || expectedKey === "b" ? e.key.toLowerCase() === expectedKey : e.key === expectedKey) {
       const keyElement = document.querySelector(`.keyboard-container span:nth-child(${konamiIndex + 1})`);
       if (keyElement) {
         keyElement.classList.add("active");
