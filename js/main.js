@@ -269,6 +269,14 @@ document.addEventListener("DOMContentLoaded", () => {
         resetKeyboardColors();
       }
     } else {
+      const keyElements = document.querySelectorAll(".keyboard-container span");
+      keyElements.forEach((element) => {
+        element.classList.add("wrong");
+        setTimeout(() => {
+          element.classList.remove("wrong");
+        }, 500);
+      });
+
       konamiIndex = 0;
       resetKeyboardColors();
     }
