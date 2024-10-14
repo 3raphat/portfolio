@@ -5,11 +5,15 @@ Welcome to my portfolio website! This project is a part of my CPE101 lesson.
 ## Features
 
 - Responsive design for various screen sizes
-- Dark mode support
+- Dark mode support with system preference detection
 - Interactive elements using vanilla JavaScript
 - Project showcase fetched from GitHub API
-- Konami code Easter egg
+- Konami code Easter egg + sound effect
 - Smooth scrolling and animations
+- Contact form with email integration
+- Dynamic quote display
+- 3D card hover effect
+- Infinite scrolling for projects page
 
 ## Technologies Used
 
@@ -33,7 +37,9 @@ Welcome to my portfolio website! This project is a part of my CPE101 lesson.
   - `projects.js`: JavaScript for fetching and displaying projects
   - `theme.js`: Handles theme switching (light/dark mode)
   - `vanilla-tilt.min.js`: Library for 3D card effects
-- `images/`: Directory for storing image assets
+- `assets/`: Directory for storing assets
+  - `images/`: Image assets
+  - `audio/`: Audio files used in the Konami code Easter egg
 
 ## Setup and Usage
 
