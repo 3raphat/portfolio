@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const navLinks = document.querySelectorAll(".nav-container a");
   const sections = document.querySelectorAll("section");
-  const scrollToTopBtn = document.getElementById("scroll-to-top");
 
   function setActiveLink() {
     const scrollPosition = window.scrollY + 100;
@@ -99,6 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
     targetSection.scrollIntoView({ behavior: "smooth" });
   }
 
+  const scrollToTopBtn = document.getElementById("scroll-to-top");
+
   function toggleScrollToTopButton() {
     scrollToTopBtn.classList.toggle("visible", window.scrollY > 300);
   }
@@ -107,15 +108,17 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+  window.addEventListener("scroll", toggleScrollToTopButton);
+
   themeToggle.addEventListener("click", toggleTheme);
 
   window.addEventListener("scroll", setActiveLink);
-  window.addEventListener("scroll", toggleScrollToTopButton);
 
   navLinks.forEach((link) => link.addEventListener("click", smoothScroll));
+
   const footerLinks = document.querySelectorAll(".footer-links a");
   footerLinks.forEach((link) => link.addEventListener("click", smoothScroll));
-  scrollToTopBtn.addEventListener("click", scrollToTop);
 
   setActiveLink();
 

@@ -2,7 +2,6 @@ const html = String.raw;
 
 document.addEventListener("DOMContentLoaded", () => {
   const projectsContainer = document.getElementById("projects-container");
-  const scrollToTopBtn = document.getElementById("scroll-to-top");
   const loadingElement = document.getElementById("loading");
   const backButton = document.getElementById("back-button");
 
@@ -51,14 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       return language;
     }
-  }
-
-  function toggleScrollToTopButton() {
-    scrollToTopBtn.classList.toggle("visible", window.scrollY > 300);
-  }
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function showLoading() {
@@ -145,11 +136,16 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchProjects();
   setupInfiniteScroll();
 
+  const scrollToTopBtn = document.getElementById("scroll-to-top");
+
+  function toggleScrollToTopButton() {
+    scrollToTopBtn.classList.toggle("visible", window.scrollY > 300);
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   window.addEventListener("scroll", toggleScrollToTopButton);
   scrollToTopBtn.addEventListener("click", scrollToTop);
-
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark");
-  }
 });

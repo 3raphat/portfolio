@@ -31,6 +31,7 @@ Welcome to my portfolio website! This project is a part of my CPE101 lesson.
 - `js/`: Directory containing JavaScript files
   - `main.js`: Main JavaScript file for index.html
   - `projects.js`: JavaScript for fetching and displaying projects
+  - `theme.js`: Handles theme switching (light/dark mode)
   - `vanilla-tilt.min.js`: Library for 3D card effects
 - `images/`: Directory for storing image assets
 
