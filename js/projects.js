@@ -1,5 +1,3 @@
-const html = String.raw;
-
 document.addEventListener("DOMContentLoaded", () => {
   const projectsContainer = document.getElementById("projects-container");
   const loadingElement = document.getElementById("loading");
