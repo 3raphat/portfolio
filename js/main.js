@@ -211,6 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const keyElement = document.querySelector(`.keyboard-container span:nth-child(${konamiIndex + 1})`);
       if (keyElement) {
         const audio = new Audio("assets/audio/correct.mp3");
+        audio.volume = 0.2;
         audio.play();
 
         keyElement.classList.add("active");
@@ -223,6 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } else if (konamiIndex > 0) {
       const audio = new Audio("assets/audio/wrong.mp3");
+      audio.volume = 0.2;
       audio.play();
 
       const keyElements = document.querySelectorAll(".keyboard-container span");
@@ -249,12 +251,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const keyboardContainer = document.querySelector(".keyboard-container");
 
     function animateText(message, delay) {
-      const audio = new Audio("assets/audio/typing.mp3");
-
       return new Promise((resolve) => {
         setTimeout(() => {
-          audio.play();
-
           keyboardContainer.textContent = "";
           let index = 0;
 
@@ -265,7 +263,6 @@ document.addEventListener("DOMContentLoaded", () => {
               const randomDelay = Math.floor(Math.random() * (150 - 50 + 1)) + 50; // Random delay between 50ms and 150ms
               setTimeout(typeText, randomDelay);
             } else {
-              audio.pause();
               resolve();
             }
           }
